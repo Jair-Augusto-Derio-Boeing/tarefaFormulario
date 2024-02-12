@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background: linear-gradient(90deg, rgba(255, 169, 209, 0.758), rgba(70, 231, 59, 0.475) 100%);
+    opacity: 95%;
+}
+
+header, .form-body {
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(0, 21, 255, 0.646), rgba(255, 70, 70, 0.349),  rgba(3, 182, 176, 0.632) 100%);
+    display: flex;
+    color: white;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+header .logo {
+    position: absolute;
+    top: 0px;
+    left: 40px;
+    height: 140px;
+}
+
+header .computer {
+    width: 700px;
+    height: 700px;
+}
+
+header h1 {
+    font-size: 90px;
+    font-weight: 900;
+}
+
+header h2 {
+    font-size: 60px;
+    font-weight: 400;
+}
+
+main {
+    display: grid;
+    justify-items: center;
+    gap: 100px;
+    padding: 100px;
+    color: white;
+    background-color: rgb(139, 145, 205);
+}
+
+main h2 {
+    font-size: 50px;
+}
+
+.cards {
+    display: flex;
+    gap: 80px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0 50px 0 50px;
+    width: 250px;
+    padding: 25px;
+    color: rgb(33, 36, 59);
+    text-align: center;
+    transition: .4s;
+    
+}
+
+.card:hover {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.393);
+    transform: translateY(-10px);
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card img {
+    height: 250px;
+    width: 250px;
+    border-radius: 0 50px 0 0;
+}
+
+main button {
+    border: none;
+    padding: 18px 23px;
+    background-color: rgba(33, 36, 59, 0.5);
+    color: white;
+    border-radius: 40px;
+    font-size: 18px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+main button:hover {
+    background-color: rgba(33, 36, 59, 0.664);
+    transform: translateY(-10px);
+
+}
+
+footer {
+    padding: 25px;
+    font-size: 16px;
+    text-align: center;
+    color: rgb(33, 36, 59);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+    }
+
+    header {
+        height: 100vh;
+        background: linear-gradient(90deg, rgb(139, 145, 205), rgb(200, 236, 239) 100%);
+        flex-direction: column;
+        color: white;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main h2 {
+        font-size: 50px;
+        text-align: center;
+    }
+
+    header .computer {
+        width: 80%;
+        height: unset;
+    }
+
+    header .logo {
+
+        position: absolute;
+        top: 0px;
+        left: 40px;
+        height: 20%;
+    }
+
+    header h1 {
+        padding-top: 180px;
+        font-size: 300%;
+        font-weight: 900;
+
+    }
+
+    header h2 {
+        padding-top: 30px;
+        font-size: 50px;
+        font-size: 220%;
+        font-weight: 400;
+    }
+
+
+}
+
+
+  
+  .wrapper{
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;  
+  }
+  
+  .link_wrapper{
+    
+    position: absolute;
+  }
+  
+  .btt{
+
+    border-radius: 100px;
+
+    display: grid;
+    width: 300px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+
+  }
+  
+  .icon{
+    
+    width: 50px;
+    height: 50px;
+    border: 3px solid transparent;
+    position: absolute;
+    transform: rotate(45deg);
+    right: 0;
+    top: 0;
+    z-index: -1;
+    transition: all .35s;
+    
+  }
+  
+  .icon svg{
+    
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    transform: rotate(-45deg);
+    fill:   purple;
+    transition: all .35s;
+  }
+  
+  .btt:hover{
+    border-radius: 100px;
+
+    width: 300px;
+    border: 3px solid purple;
+    background: none;
+    color: purple;
+  }
+  
+  .btt:hover + .icon{
+
+    border: 3px solid purple;
+    right: -23%;
+  }
+
+  .span-required{
+    display: none;
+    font-size: 15px;
+    margin-top: 5px;
+    color: rgb(255, 28, 28);
+  }
