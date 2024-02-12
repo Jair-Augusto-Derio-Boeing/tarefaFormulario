@@ -23,8 +23,8 @@
     <form id="form" class="border  border-opacity-75 border-3 border-white p-4 rounded-5 shadow-lg">
 
       <div class="mb-3">
-        <label for="text" class="form-label " >Nome</label>
-        <input type="text" class="form-control required" id="name"oninput="nameValidate()">
+        <label for="text" class="form-label ">Nome</label>
+        <input type="text" class="form-control required" id="name" oninput="nameValidate()">
         <span class="span-required">O Nome deve ter pelo menos 3 Caractere!</span>
       </div>
 
@@ -36,7 +36,8 @@
 
       <div class="mb-3">
         <label for="number" class="form-label ">telefone</label>
-        <input type="number" class="form-control required" id="number" oninput="numberValidate()">
+        <input type="tel" class="form-control required" id="tel" name="tel" oninput="numberValidate()" maxlength="15"
+          pattern="\(\d{2}\)\s*\d{5}-\d{4}" required>
         <span class="span-required">Insira um Telefone Válido!</span>
       </div>
 
@@ -46,7 +47,8 @@
 
       </div>
 
-      <button type="submit" class="btn btn-info w-100"> Enviar </button>
+      <button type="submit" class="btn btn-info w-100 form-control" id="tel" name="tel" maxlength="15"
+        pattern="\(\d{2}\)\s*\d{5}-\d{4}" required> Enviar </button>
 
     </form>
 
