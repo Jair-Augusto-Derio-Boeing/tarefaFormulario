@@ -22,6 +22,23 @@ form.addEventListener('submit', (event) =>{
     nameValidate();
     emailValidate();
     numberValidate();
+    
+    let data = {
+        nome: campos[0].value,
+        email: campos[1].value,
+        number: campos[2].value
+    }
+
+    fetch("https://webhook.site/3199b824-acd0-44f6-9482-6dc31bb7b218", {
+        method: "POST", // verbos https,
+        // headers: {
+        //     'Accept': 'application/json',
+        //     'Content-Type': 'application/json',
+        //     'Allow-Origin': '*',
+        //     'Access-Control-Allow-Origin': '*'
+        // },
+        body: JSON.stringify(data)
+    });
 })
 
 function setError(index) {
@@ -53,10 +70,7 @@ function emailValidate() {
     setError(1);
 }
 function numberValidate() {
-    let teste = campos[2].value[0];
-    console.log(teste);
-    console.log(campos[2].value.length);
-    if (campos[2].value.length === 11 && campos[2].value[0] == 4) {
+    if (campos[2].value.length === 15 && campos[2].value[1] == 4) {
         removeError(2);
         return       
     }
@@ -64,20 +78,4 @@ function numberValidate() {
     
 }
 
-//     let data = {
-//         nome: name.value,
-//         idade: age.value
-//     }
-
-//     fetch("https://webhook.site/3199b824-acd0-44f6-9482-6dc31bb7b218", {
-//         method: "POST", // verbos https,
-//         headers: {
-//             'Accept': 'application/json',
-//             'Content-Type': 'application/json',
-//             'Allow-Origin': '*',
-//             'Access-Control-Allow-Origin': '*'
-//         },
-//         body: JSON.stringify(data)
-//     });
-// }
 
